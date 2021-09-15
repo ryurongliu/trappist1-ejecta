@@ -24,21 +24,19 @@ Example plots:
 ### Simulation
 1. Copy start_template.py and rename it to [#ejecta]e_[#years]y_[#velocity increment]vinc.py 
 2. Edit lines 309-xxx to input simulation variables
-      - num_ejecta: number of ejecta
-      - num_years: number of years to integrate
-      - v_increment: velocity increment in km/s
-      - sourceplanet: choose from ['b', 'c', 'd', 'e', 'f', 'g', 'h']
-      - archive_int: time interval (years) per archive snapshot; recommended 10yr
-    - IF CPU TIME IS LIMITED:
-      - chunk: how many years to integrate at a time
-      - proj_chunktime: how long it takes to integrate each chunk (projected)
-      - maxtime: maximum time you have on the CPU
 3. copy start_template.sh and rename it the same way (with .sh)
 4. Edit the .sh file to reflect the python file name, and how many iterations you want to run
 5. Submit job to slurm  
-Output data will be organized like so:  
-[Ejecta_Simulation_Data]
-- []e_[]y_[]vinc_[sim_num]
-  - ........_end.bin : 
-  - ........_overview.bin
-  - ........_
+  
+A folder called `Ejecta_Simulation_Data` will be created, with the data from each simulation inside.   
+  
+### Analysis (see README inside analysis_tools for more info on creating specific plots)
+1. Download the folder `analysis_tools` and add it to your PYTHONPATH.
+2. Run `setup` from `setup.py` in the same directory as `Ejecta_Simulation_Data` to create a `Plots` directory structure.
+3. Run `histograms` from `histograms.py` to create histograms.
+4. Run `cols_v_time` from `cols_v_time.py` to create plots of collisions vs. time. 
+5. For orbital element plots:
+      - Run `sort_particles_all` from `orbital_elements.py`; this will create a .pkl file of sorted particles
+      - Run `get_orbital_elements_all` from `orbital_elements.py`; this will create .pkl files of desired orbital elements
+      - Run `orbital_elements_videos_all` from `orbital_elements.py` to create inc vs. a and e vs. a videos.
+      - Run `ecc_snapshot_all` or `inc_snapshot_all` from `orbital_elements.py` to create specific time snapshots of inc vs. a or e vs. a graphs. (See README in analysis_tools for more details.)
