@@ -36,10 +36,10 @@ For all_ejecta plots:
     orbital_elements_videos_all()
         - create all animations for inc v. a and e v. a
         
-    ecc_snapshot_allp()
+    ecc_snapshot_allp(vinc, timeslice, rem=True, esc=True, b=True, c=True, d=True, e=True, f=True, g=True, h=True)
         - create a single snapshot of e vs. a
         
-    inc_snapshot_allp()
+    inc_snapshot_allp(vinc, timeslice, rem=True, esc=True, b=True, c=True, d=True, e=True, f=True, g=True, h=True)
         - create a single snapshot of inc vs. a
 
 """
