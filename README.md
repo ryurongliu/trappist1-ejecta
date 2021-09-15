@@ -12,5 +12,13 @@ Simulations were performed in batches using Columbia University's terremoto comp
 - **used_scripts/** contains the python and slurm scripts for specific v_increments.
 - **analysis_tools/** contains modules for processing and analyzing output data.
 
+Example plots:  
+![overview_percentages_of_total_histogram](https://user-images.githubusercontent.com/84996423/133484243-8c4e6e55-b56a-4136-bcbc-af95ad981a71.png)
+![300000e_2000y_4vinc_g_cols_v_time](https://user-images.githubusercontent.com/84996423/133484337-128612dc-ef51-4865-b79e-f1aaf131b9ac.png)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/84996423/133485125-dcaa7206-f065-4e2a-b24c-72af3f6f42be.gif)
+
+
 ## Documentation
-[IN PROGRESS] - This code will be generalized to create an end-to-end pipeline for simulating, processing, and analyzing impact ejecta in any exoplanetary system. 
+[IN PROGRESS] - This code will be generalized to create an end-to-end pipeline for simulating, processing, and analyzing impact ejecta in any exoplanetary system.  
+
+
