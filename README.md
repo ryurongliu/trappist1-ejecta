@@ -19,6 +19,10 @@ Example plots:
 
 
 ## Documentation
-[IN PROGRESS] - This code will be generalized to create an end-to-end pipeline for simulating, processing, and analyzing impact ejecta in any exoplanetary system.  
+[IN PROGRESS] - This code will be eventually generalized to create an end-to-end pipeline for simulating, processing, and analyzing impact ejecta in any exoplanetary system.  
+
+### Simulation
+1. Copy start_template.py and rename it to [#ejecta]e_[#years]y_[#velocity increment]vinc.py 
+2. Edit lines 
 
 
