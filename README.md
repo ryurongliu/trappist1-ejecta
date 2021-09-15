@@ -23,6 +23,22 @@ Example plots:
 
 ### Simulation
 1. Copy start_template.py and rename it to [#ejecta]e_[#years]y_[#velocity increment]vinc.py 
-2. Edit lines 
-
-
+2. Edit lines 309-xxx to input simulation variables
+      - num_ejecta: number of ejecta
+      - num_years: number of years to integrate
+      - v_increment: velocity increment in km/s
+      - sourceplanet: choose from ['b', 'c', 'd', 'e', 'f', 'g', 'h']
+      - archive_int: time interval (years) per archive snapshot; recommended 10yr
+    - IF CPU TIME IS LIMITED:
+      - chunk: how many years to integrate at a time
+      - proj_chunktime: how long it takes to integrate each chunk (projected)
+      - maxtime: maximum time you have on the CPU
+3. copy start_template.sh and rename it the same way (with .sh)
+4. Edit the .sh file to reflect the python file name, and how many iterations you want to run
+5. Submit job to slurm  
+Output data will be organized like so:  
+[Ejecta_Simulation_Data]
+- []e_[]y_[]vinc_[sim_num]
+  - ........_end.bin : 
+  - ........_overview.bin
+  - ........_
